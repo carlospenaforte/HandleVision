@@ -25,8 +25,8 @@ while True:
                 h, w, c = frame.shape
                 cx, cy = int(lm.x * w), int(lm.y * h)
                 print(id, cx, cy)
-                if id == 4:
-                    cv2.circle(frame, (cx, cy), 10, (255, 0, 255), cv2.FILLED)
+                # if id == 4:
+                cv2.circle(frame, (cx, cy), 10, (255, 0, 255), cv2.FILLED)
 
             mpDraw.draw_landmarks(frame, handLms, mpHands.HAND_CONNECTIONS)
 
