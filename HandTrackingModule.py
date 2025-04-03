@@ -3,6 +3,7 @@ import cv2
 import mediapipe as mp
 import time
 
+cap = cv2.VideoCapture(0)
 
 class handDetector():
     def __init__(self, mode=False, maxHands = 2, detectionCon = 0.5, trackCon = 0.5 ):
@@ -15,7 +16,7 @@ class handDetector():
         self.hands = self.mpHands.Hands(self.mode, self.maxHands, self.detectionCon, self.trackCon)
         self.mpDraw = mp.solutions.drawing_utils
 
-    def findHands(self, frame, draw = True):
+    def findHands(self, frame, draw=True):
         frameRGB = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         results = self.hands.process(frameRGB)
 
@@ -25,7 +26,9 @@ class handDetector():
                     self.mpDraw.draw_landmarks(frame, handLms, self.mpHands.HAND_CONNECTIONS)
         return frame
 
-                #for id, lm in enumerate(handLms.landmark):
+        def findPosition(self, frame, handNo=0, draw=True):
+
+                # for id, lm in enumerate(handLms.landmark):
                 #    # print(id, lm)
                 #    h, w, c = frame.shape
                 #    cx, cy = int(lm.x * w), int(lm.y * h)
@@ -46,7 +49,7 @@ def main():
         fps = 1 / (cTime - pTime)
         pTime = cTime
 
-        cv2.putText(frame, str(int(fps)), (19, 70), cv2.FONT_ITALIC, 3, (255, 0, 0), 3)
+        cv2.putText(frame, str(int(fps)), (10, 70), cv2.FONT_ITALIC, 3, (255, 0, 0), 3)
 
         cv2.imshow("frame", frame)
         if cv2.waitKey(1) == ord('q'):
@@ -55,5 +58,5 @@ def main():
 if __name__ == "__main__":
     main()
 
-# cap.release()
-# cv2.destroyAllWindows()
+cap.release()
+cv2.destroyAllWindows()
