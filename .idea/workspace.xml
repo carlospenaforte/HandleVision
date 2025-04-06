@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bca930e-76e2-42ea-90ed-8c6479604f53" name="Changes" comment="Created project for handle computer vision." />
+    <list default="true" id="4bca930e-76e2-42ea-90ed-8c6479604f53" name="Changes" comment="Created project for handle computer vision.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandTrackingModule.py" beforeDir="false" afterPath="$PROJECT_DIR$/HandTrackingModule.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
