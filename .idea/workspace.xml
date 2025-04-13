@@ -172,8 +172,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/HandTrackingModule.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="3" />
+          <line>33</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
